@@ -1,7 +1,7 @@
 # Pet Eye Disease Model🐾
 
 이 프로젝트는 **Jupyter Notebook**으로, 반려동물의 눈 질병 이미지를 분류하는 **딥러닝 모델**을 개발하고 평가합니다.  
-PETCARE 안드로이드 앱의 핵심 기능인 **눈 건강 검사(Eye Health Test)**에 사용되며, **AWS EC2 서버**에 배포되어 실제 서비스에 활용됩니다.
+PetCare 안드로이드 앱의 핵심 기능인 **눈 건강 검사(Eye Health Test)**에 사용되며, **AWS EC2 서버**에 배포되어 실제 서비스에 활용됩니다.
 
 ---
 
@@ -13,11 +13,13 @@ PETCARE 안드로이드 앱의 핵심 기능인 **눈 건강 검사(Eye Health T
 3. 안검종양 (Tumors)  
 4. 무증상 (Asymptomatic)  
 
-**MobileNetV2 기반 전이 학습(Transfer Learning)**을 활용하여, 데이터가 적더라도 효율적이고 정확하게 예측할 수 있습니다.**
+**MobileNetV2 기반 전이 학습(Transfer Learning)을 활용하여, 데이터가 적더라도 효율적이고 정확하게 예측할 수 있습니다.**
 
 ---
 
 ## 🛠️ 모델 및 학습 전략
+![Image](https://github.com/user-attachments/assets/d10db915-d7b3-4a3f-90fb-9d9b8b71b4a5)
+
 
 ### 1. MobileNetV2 기반 전이 학습 모델
 - **구조:** 사전 학습된 MobileNetV2를 기본 모델로 사용  
@@ -54,6 +56,16 @@ PETCARE 안드로이드 앱의 핵심 기능인 **눈 건강 검사(Eye Health T
 ### 2. 클래스별 상세 성능
 ![Image](https://github.com/user-attachments/assets/6ec26042-ba0c-45a2-86e2-6cf9082712b8)
 
+
+|Class|	Precision	|Recall|	F1-score	|support
+| --- | --- | --- | --- | --- |
+결막염	|0.89	|0.77	|0.83	|239
+**백내장**	|0.8|	0.71|	**0.76**|	168
+**안검종양**	|0.9	|0.9	|**0.9**	|114
+무증상	|0.77|	1|	0.87|	172
+**accuracy**|	|	|	**0.84**|	**693**
+macro avg	|0.84|	0.85|	0.84|	693
+weighted avg|	0.84|	0.84|	0.83|	693
 
 - **안검종양(Tumor)** 감지는 매우 신뢰할 수 있으며, 놓칠 가능성이 낮음  
 - **백내장(Cataract)** 감지는 상대적으로 재현율이 낮아 일부 이미지가 다른 클래스와 혼동될 수 있음  
