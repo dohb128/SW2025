@@ -13,7 +13,7 @@ PETCARE 안드로이드 앱의 핵심 기능인 **눈 건강 검사(Eye Health T
 3. 안검종양 (Tumors)  
 4. 무증상 (Asymptomatic)  
 
-**MobileNetV2 기반 전이 학습(Transfer Learning)**을 활용하여, 데이터가 적더라도 효율적이고 정확하게 예측할 수 있습니다.
+**MobileNetV2 기반 전이 학습(Transfer Learning)**을 활용하여, 데이터가 적더라도 효율적이고 정확하게 예측할 수 있습니다.**
 
 ---
 
